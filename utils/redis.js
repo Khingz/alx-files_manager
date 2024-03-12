@@ -15,7 +15,7 @@ class RedisClient {
 
   async get (key) {
     return new Promise((resolve, reject) => {
-      this.client.getAsync(key, (err, value) => {
+      this.client.get(key, (err, value) => {
         if (err) {
           reject(err);
         } else {
